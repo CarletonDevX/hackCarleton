@@ -106,17 +106,6 @@ h1, h2, h3, h4, h5,
   @media (min-width: 768px) {
     .site-section-heading h2 {
       font-size: 3rem; } }
-  .site-section-heading h2:after {
-    content: "";
-    left: 0%;
-    bottom: 0;
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background: -webkit-gradient(linear, left top, right top, from(#c70039), color-stop(70%, #ff5733));
-    background: -webkit-linear-gradient(left, #c70039, #ff5733 70%);
-    background: -o-linear-gradient(left, #c70039, #ff5733 70%);
-    background: linear-gradient(to right, #c70039, #ff5733 70%); }
     @media (min-width: 992px) {
       .site-section-heading h2:after {
         left: -20%; } }

@@ -27,8 +27,12 @@
           <div class="col-md-10">
             <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.5rem">Spring
               2019</span>
-            <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200" style="font-size: 2.5rem">Hack Carleton</h1>
-            <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.5rem">April 13th-14th // Check-in begins at 9:15 am
+            <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200" style="font-size: 2.5rem">
+              Hack Carleton
+            </h1>
+            <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300" style="font-size: 1.5rem">
+              April 13th-14th // Check-in begins at 9:15 am <br>
+              <h1 style="font-size: 1.5rem" id="demo"></h1>
             </span>
             <a href="https://goo.gl/forms/P1O3aAN93SbMGTpt1" target="_blank" class="btn-custom" data-aos="fade-up"
               data-aos-delay="400"><span>RSVP</span></a>
@@ -123,7 +127,7 @@
           </div>
 
           <div class="col-12 border-top border-bottom py-5" data-aos="fade" data-aos-delay="200">
-              <span class="h4">Sunday, 14th April</span>
+            <span class="h4">Sunday, 14th April</span>
           </div>
 
           <div class="col-12 border-bottom py-5" data-aos="fade" data-aos-delay="600">
@@ -158,6 +162,36 @@
 
   </div>
 
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 13, 2019 09:15:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = "Starts in " + days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+      // If the count down is finished, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
